@@ -24,8 +24,8 @@ public class ConfigBean {
     public ConfigBean()
     {
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(getClass().getClassLoader().
-                    getResource(ALARMS_FILE).getFile()));
+            BufferedReader reader = new BufferedReader(new InputStreamReader(getClass().getClassLoader().
+                    getResourceAsStream(ALARMS_FILE)));
             String line;
 
             while((line= reader.readLine())!=null)
