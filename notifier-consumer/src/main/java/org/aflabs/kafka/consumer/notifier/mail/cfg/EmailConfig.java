@@ -1,8 +1,6 @@
 package org.aflabs.kafka.consumer.notifier.mail.cfg;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 public class EmailConfig {
 
@@ -28,8 +26,8 @@ public class EmailConfig {
     public EmailConfig()
     {
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(getClass().getClassLoader().
-                    getResource(EMAIL_FILE).getFile()));
+            BufferedReader reader = new BufferedReader(new InputStreamReader(getClass().getClassLoader().
+                    getResourceAsStream(EMAIL_FILE)));
             String line;
 
             while((line= reader.readLine())!=null)
