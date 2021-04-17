@@ -1,6 +1,7 @@
 package org.aflabs.kafka.consumer.notifier.mail.cfg;
 
 import java.io.*;
+import java.util.Properties;
 
 public class EmailConfig {
 
@@ -23,43 +24,25 @@ public class EmailConfig {
     private String emailDestination;
 
 
-    public EmailConfig()
-    {
-        try {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(getClass().getClassLoader().
-                    getResourceAsStream(EMAIL_FILE)));
-            String line;
+    public EmailConfig() {
 
-            while((line= reader.readLine())!=null)
-            {
-                String[] configValue = line.split("=");
-                switch(configValue[0])
-                {
-                    case SMTP_SERVER:
-                        this.smtpServer= configValue[1];
-                        break;
-                    case PORT:
-                        this.port= configValue[1];
-                        break;
-                    case EMAIL_ORIGIN:
-                        this.emailOrigin= configValue[1];
-                        break;
-                    case USERNAME:
-                        this.username= configValue[1];
-                        break;
-                    case PASSWORD:
-                        this.password= configValue[1];
-                        break;
-                    case EMAIL_DEST:
-                        this.emailDestination= configValue[1];
-                        break;
-                    default: break;
-                }
-            }
+        try {
+
+            Properties props = new Properties();
+            props.load(new InputStreamReader(getClass().getClassLoader().
+                    getResourceAsStream(EMAIL_FILE)));
+
+            this.smtpServer = props.getProperty(SMTP_SERVER);
+            this.port = props.getProperty(PORT);
+            this.emailOrigin = props.getProperty(EMAIL_ORIGIN);
+            this.username = props.getProperty(USERNAME);
+            this.password = props.getProperty(PASSWORD);
+            this.emailDestination = props.getProperty(EMAIL_DEST);
+
         } catch (IOException e) {
             e.printStackTrace();
-
         }
+
     }
 
     public String getSmtpServer() {
