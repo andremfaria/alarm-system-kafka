@@ -1,0 +1,9 @@
+smtpServer=smtp.gmail.com
+port=587
+emailOrigin=dragaobds@gmail.com
+username=dragaobds@gmail.com
+password=p455w0rd
+emailDestination=andremfaria86@gmail.com
+telegramNotification=on
+telegramToken=1641723726:AAH2KQ04zsA7EuuwKstMiqnHSFXGmhIBnjU
+telegramChatId=1440232803
