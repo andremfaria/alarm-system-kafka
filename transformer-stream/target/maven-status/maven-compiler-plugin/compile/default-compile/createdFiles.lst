@@ -1,6 +1,0 @@
-org/aflabs/kafka/stream/transformer/conf/ConfigBean.class
-org/aflabs/kafka/stream/transformer/beans/AggInfo.class
-org/aflabs/kafka/stream/transformer/streams/GenericStream.class
-org/aflabs/kafka/stream/transformer/AlarmsStream.class
-org/aflabs/kafka/stream/transformer/streams/impl/AlarmStream.class
-org/aflabs/kafka/stream/transformer/streams/serdes/AggInfoSerdes.class

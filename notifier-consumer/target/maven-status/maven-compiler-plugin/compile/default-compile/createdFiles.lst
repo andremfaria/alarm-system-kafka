@@ -1,8 +1,0 @@
-org/aflabs/kafka/consumer/notifier/Consumer.class
-org/aflabs/kafka/consumer/notifier/processor/Processor.class
-org/aflabs/kafka/consumer/notifier/notification/Telegram.class
-org/aflabs/kafka/consumer/notifier/notification/Notification.class
-org/aflabs/kafka/consumer/notifier/notification/util/Serdes.class
-org/aflabs/kafka/consumer/notifier/notification/Email.class
-org/aflabs/kafka/consumer/notifier/notification/NotificationFactory.class
-org/aflabs/kafka/consumer/notifier/notification/cfg/NotificationCfg.class
