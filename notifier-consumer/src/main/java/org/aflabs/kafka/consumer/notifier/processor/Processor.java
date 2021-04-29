@@ -1,6 +1,11 @@
 package org.aflabs.kafka.consumer.notifier.processor;
 
-import org.aflabs.kafka.consumer.notifier.mail.Email;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import jdk.nashorn.internal.ir.ObjectNode;
+import org.aflabs.kafka.consumer.notifier.notification.Email;
+import org.aflabs.kafka.consumer.notifier.notification.Notification;
+import org.aflabs.kafka.consumer.notifier.notification.NotificationFactory;
+import org.aflabs.kafka.consumer.notifier.notification.Telegram;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.slf4j.Logger;
@@ -17,6 +22,9 @@ public class Processor implements Runnable {
 
     private ConsumerRecords<String,String> consumerRecords;
 
+
+    Notification test = NotificationFactory.getNotification("email");
+
     public Processor(ConsumerRecords<String,String> consumerRecords)
     {
         this.consumerRecords = consumerRecords;
@@ -31,7 +39,13 @@ public class Processor implements Runnable {
         {
             consumerRecord = iterator.next();
             log.info("Process message: Key -> {} Message -> {}",consumerRecord.key(),consumerRecord.value());
-            Email.sendEmail(SUBJECT+consumerRecord.key(),CONTENT+consumerRecord.value());
+
+            if(consumerRecord.value() == null)
+                continue;
+
+            NotificationFactory.getNotification("email").send(consumerRecord.key(),consumerRecord.value());
+            NotificationFactory.getNotification("telegram").send(consumerRecord.key(),consumerRecord.value());
+            //Email.sendEmail(SUBJECT+consumerRecord.key(),CONTENT+consumerRecord.value());
         }
 
     }
