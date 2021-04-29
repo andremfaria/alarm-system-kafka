@@ -1,8 +1,0 @@
-/Users/andfaria/Desktop/Labs/ApacheKafkaLabs/ExerciseByMe/java/notifier-consumer/src/main/java/org/aflabs/kafka/consumer/notifier/processor/Processor.java
-/Users/andfaria/Desktop/Labs/ApacheKafkaLabs/ExerciseByMe/java/notifier-consumer/src/main/java/org/aflabs/kafka/consumer/notifier/notification/Email.java
-/Users/andfaria/Desktop/Labs/ApacheKafkaLabs/ExerciseByMe/java/notifier-consumer/src/main/java/org/aflabs/kafka/consumer/notifier/notification/Notification.java
-/Users/andfaria/Desktop/Labs/ApacheKafkaLabs/ExerciseByMe/java/notifier-consumer/src/main/java/org/aflabs/kafka/consumer/notifier/Consumer.java
-/Users/andfaria/Desktop/Labs/ApacheKafkaLabs/ExerciseByMe/java/notifier-consumer/src/main/java/org/aflabs/kafka/consumer/notifier/notification/cfg/NotificationCfg.java
-/Users/andfaria/Desktop/Labs/ApacheKafkaLabs/ExerciseByMe/java/notifier-consumer/src/main/java/org/aflabs/kafka/consumer/notifier/notification/NotificationFactory.java
-/Users/andfaria/Desktop/Labs/ApacheKafkaLabs/ExerciseByMe/java/notifier-consumer/src/main/java/org/aflabs/kafka/consumer/notifier/notification/Telegram.java
-/Users/andfaria/Desktop/Labs/ApacheKafkaLabs/ExerciseByMe/java/notifier-consumer/src/main/java/org/aflabs/kafka/consumer/notifier/notification/util/Serdes.java
