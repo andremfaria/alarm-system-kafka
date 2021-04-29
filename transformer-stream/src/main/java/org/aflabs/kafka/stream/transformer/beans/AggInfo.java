@@ -93,6 +93,23 @@ public class AggInfo  {
     }
 
 
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+
+        builder.append("{ sumCpu: ");
+        builder.append(this.sumCpu);
+        builder.append(" , sumMem: ");
+        builder.append(this.sumMem);
+        builder.append(" , avgMem: ");
+        builder.append(this.avgMem);
+        builder.append(", avgCpu: ");
+        builder.append(this.avgCpu);
+
+
+        return builder.toString();
+    }
+
     private double roundDouble(double d, int places)
     {
         BigDecimal res = BigDecimal.valueOf(d);

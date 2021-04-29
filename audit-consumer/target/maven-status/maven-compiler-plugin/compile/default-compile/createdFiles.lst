@@ -1,0 +1,3 @@
+org/aflabs/kafka/connector/file/FileConnector.class
+org/aflabs/kafka/connector/file/FileConfig.class
+org/aflabs/kafka/connector/file/FileTask.class
