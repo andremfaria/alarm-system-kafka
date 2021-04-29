@@ -16,7 +16,7 @@ After took some kafka udemy courses, i did this mini project to apply some of th
 * If the limits are exceed inside a time window then a notification must be send.
 * All the messages must be audited in a text file.
 ### Architeture
-![Architeture](https://trello-attachments.s3.amazonaws.com/5ed95fb1d0ffad157756b7df/1002x753/bfae0c2a60186a9ee142379347a9a901/alarm_system_draft.png)
+![Architeture](https://trello-attachments.s3.amazonaws.com/608476993544df7c860a0d17/1002x753/7682f8ede211cdb08a6d9269e32b7d23/alarm_system_draft.png)
 ## Configurations
 ### audit-consumer
 #### resources/fileconnector.properties
@@ -34,6 +34,10 @@ emailOrigin | Sender | notifier@gmail.com
 username | User | notifier@gmail.com
 password | Password | test
 emailDestination | Destionation email | admin@gmail.com
+telegramToken | Telegram Token | blablabla231321
+telegramNotification | Set on/off telegram notification | on
+telegramChatId | Conversation ID to send notification  | 123123
+
 
 ### transformer-stream
 #### resources/alarms.properties
