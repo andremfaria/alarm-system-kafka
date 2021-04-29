@@ -65,9 +65,7 @@ public class AlarmStream extends GenericStream {
                         v.getAvgMem() < configBean.getAlarmMemory());
 
         //Need to put map again due to windowed key.
-        kTable.toStream().
-                 filter((key,value) -> value != null)
-                .map((key,value)-> KeyValue.pair(key.key(),value)).
+        kTable.toStream().map((key,value)-> KeyValue.pair(key.key(),value)).
                 to(alarmTopic, Produced.with(Serdes.String(),aggSerde));
 
         return streamBuilder;

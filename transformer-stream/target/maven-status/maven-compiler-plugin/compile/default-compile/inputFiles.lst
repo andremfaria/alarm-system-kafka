@@ -1,6 +1,0 @@
-/Users/andfaria/Desktop/Labs/ApacheKafkaLabs/ExerciseByMe/java/transformer-stream/src/main/java/org/aflabs/kafka/stream/transformer/beans/AggInfo.java
-/Users/andfaria/Desktop/Labs/ApacheKafkaLabs/ExerciseByMe/java/transformer-stream/src/main/java/org/aflabs/kafka/stream/transformer/conf/ConfigBean.java
-/Users/andfaria/Desktop/Labs/ApacheKafkaLabs/ExerciseByMe/java/transformer-stream/src/main/java/org/aflabs/kafka/stream/transformer/AlarmsStream.java
-/Users/andfaria/Desktop/Labs/ApacheKafkaLabs/ExerciseByMe/java/transformer-stream/src/main/java/org/aflabs/kafka/stream/transformer/streams/serdes/AggInfoSerdes.java
-/Users/andfaria/Desktop/Labs/ApacheKafkaLabs/ExerciseByMe/java/transformer-stream/src/main/java/org/aflabs/kafka/stream/transformer/streams/GenericStream.java
-/Users/andfaria/Desktop/Labs/ApacheKafkaLabs/ExerciseByMe/java/transformer-stream/src/main/java/org/aflabs/kafka/stream/transformer/streams/impl/AlarmStream.java
