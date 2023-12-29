@@ -2,7 +2,7 @@
 An alarm system that monitor hosts' CPU &amp; memory indicators and send notifications according to user configurations. 
 
 ## Context
-After took some kafka udemy courses, i did this mini project to apply some of the knowledges that i got. 
+After took some kafka udemy courses, i did this mini project to apply some of the knowledge that i got. 
  
 ### Kafka topics covered
 * Consumer API
@@ -61,6 +61,12 @@ Navigating to root dir and execute:
 
 mvn clean install assembly:single
 
+```
+
+Start kafka and zookeeper:
+
+```
+docker-compose -f docker-compose.yaml up
 ```
 
 ### Running
