@@ -1,11 +1,7 @@
 package org.aflabs.kafka.consumer.notifier.processor;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import jdk.nashorn.internal.ir.ObjectNode;
-import org.aflabs.kafka.consumer.notifier.notification.Email;
 import org.aflabs.kafka.consumer.notifier.notification.Notification;
 import org.aflabs.kafka.consumer.notifier.notification.NotificationFactory;
-import org.aflabs.kafka.consumer.notifier.notification.Telegram;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.slf4j.Logger;
@@ -14,9 +10,6 @@ import org.slf4j.LoggerFactory;
 import java.util.Iterator;
 
 public class Processor implements Runnable {
-
-    private static final String SUBJECT = "New alarm received for host ";
-    private static final String CONTENT = "Information about host: ";
 
     private static Logger log = LoggerFactory.getLogger(Processor.class);
 

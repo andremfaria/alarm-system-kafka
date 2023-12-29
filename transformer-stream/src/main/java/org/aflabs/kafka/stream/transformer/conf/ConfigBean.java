@@ -1,34 +1,27 @@
 package org.aflabs.kafka.stream.transformer.conf;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.io.*;
 import java.util.Properties;
 
 public class ConfigBean {
 
-
-    private static Logger log = LoggerFactory.getLogger(ConfigBean.class);
-    //Static config variables
+    // Static config variables
     private static final String ALARMS_FILE = "alarms.properties";
     private static final String MEM_CONF = "memory";
     private static final String CPU_CONF = "cpu";
     private static final String RETENTION_CONF = "retention";
 
-    //Instance variables
+    // Instance variables
     private Double alarmMemory;
     private Double alarmCpu;
     private Long retentionTime;
-
 
     public ConfigBean() {
         try {
 
             Properties props = new Properties();
 
-            props.load(new InputStreamReader(getClass().getClassLoader().
-                    getResourceAsStream(ALARMS_FILE)));
+            props.load(new InputStreamReader(getClass().getClassLoader().getResourceAsStream(ALARMS_FILE)));
 
             this.alarmMemory = Double.valueOf(props.getProperty(MEM_CONF));
             this.alarmCpu = Double.valueOf(props.getProperty(CPU_CONF));
@@ -36,7 +29,7 @@ public class ConfigBean {
 
         } catch (IOException e) {
             e.printStackTrace();
-            //Assuming default values
+            // Assuming default values
             this.retentionTime = 300l;
             this.alarmCpu = 10.0;
             this.alarmMemory = 12.0;

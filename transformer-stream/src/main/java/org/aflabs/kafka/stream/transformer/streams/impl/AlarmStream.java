@@ -46,7 +46,6 @@ public class AlarmStream extends GenericStream {
         Deserializer<AggInfo> aggDeserializer = new AggInfoSerdes();
         Serde<AggInfo> aggSerde = Serdes.serdeFrom(aggSerializer, aggDeserializer);
 
-        AggInfo info = new AggInfo();
         log.info("Starting topology:");
         StreamsBuilder streamBuilder = new StreamsBuilder();
 
