@@ -1,9 +1,6 @@
 package org.aflabs.kafka.stream.transformer.beans;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
